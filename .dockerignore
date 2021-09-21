@@ -1,0 +1,6 @@
+.git
+.idea
+*.md
+app.json
+node_modules
+.dockerignore

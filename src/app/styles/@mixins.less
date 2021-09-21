@@ -1,0 +1,50 @@
+@import '@variables.less';
+
+.lib-focusing(@bg: @focused-highlight) {
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -(@focus-outline-size/2);
+        bottom: -(@focus-outline-size/2);
+        left: -@focus-outline-size;
+        right: -@focus-outline-size;
+        background-color: @bg;
+        border-radius: 3px;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .1s ease-in;
+    }
+
+    &:focus, &:active {
+        outline: none;
+
+        &:after {
+            opacity: .9;
+            z-index: -1;
+        }
+    }
+
+    &:hover:not(.disabled) {
+        outline: none;
+
+        &:after {
+            opacity: .7;
+            z-index: -1;
+        }
+    }
+}
+
+.lib-disabled(@bg : @controls-background-disabled) {
+    &.disabled {
+        pointer-events: none;
+        color: @controls-color-disabled;
+        background-color: @bg;
+
+        img {
+            opacity: .5;
+            filter: grayscale(100%);
+        }
+    }
+}

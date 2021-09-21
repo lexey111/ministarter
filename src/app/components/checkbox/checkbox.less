@@ -1,0 +1,49 @@
+@import '../../styles/@variables.less';
+@import '../../styles/@mixins.less';
+
+.@{lib-prefix}-checkbox {
+  display: inline-flex;
+  z-index: 0;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0 1em 0 0;
+  cursor: default;
+  position: relative;
+
+  span {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .checkbox-tickmark {
+    margin-right: .4em;
+
+    img {
+      display: inline;
+      height: 1em;
+      vertical-align: text-top;
+    }
+  }
+
+  .checkbox-title {
+    padding-right: 1em;
+  }
+
+  &.no-title {
+    padding: 0;
+
+    .checkbox-tickmark {
+      margin-right: 0;
+    }
+
+    .checkbox-title {
+      display: none;
+    }
+  }
+
+  .lib-disabled(transparent);
+
+  .lib-focusing();
+}

@@ -1,0 +1,50 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+@bg-color: #f2f2f2;
+@app-bg-color: #fff;
+
+body {
+    line-height: 1.4em;
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column wrap;
+    background-color: @bg-color;
+}
+
+.app-container {
+    min-height: 100vh;
+    flex-grow: 2;
+    background-color: @app-bg-color;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.app-main-content {
+    padding: 32px;
+}
+
+p.filler {
+    color: #ccccce;
+}
+
+@media all and (max-width: 1000px) {
+    .app-container {
+        width: auto;
+        min-width: 350px;
+        margin: 0;
+    }
+
+    .app-main-content {
+        padding: 32px 16px;
+    }
+}
+
+@media all and (max-width: 390px) {
+    .app-main-content {
+        padding: 8px 4px;
+    }
+}
