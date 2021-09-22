@@ -6,7 +6,7 @@ const dropdown1_list = 'div[data-taf-path="dropdown1"].open .dropdown-content';
 const dropdown2 = 'div[data-taf-path="dropdown2"]';
 const dropdown2_list = 'div[data-taf-path="dropdown2"].open .dropdown-content';
 
-describe('/ [Dropdown]', () => {
+describe('[Dropdown]', () => {
     let page;
 
     beforeAll(async () => {

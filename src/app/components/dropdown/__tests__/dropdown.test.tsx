@@ -46,7 +46,7 @@ describe('Test Dropdown component', () => {
 
   describe('Render nodes', () => {
     test('Should render 3 nodes', () => {
-      const wrapper = mount(<Dropdown value={1} onChange={() => null}>
+      const wrapper = mount(<Dropdown value={1} onChange={() => null} open={true}>
         <DropdownItem value={1}>Test title 1</DropdownItem>
         <DropdownItem value={2}>Test title 2</DropdownItem>
         <DropdownItem value={3}>Test title 3</DropdownItem>
@@ -55,7 +55,7 @@ describe('Test Dropdown component', () => {
     });
 
     test('Nodes should have the correct titles', () => {
-      const wrapper = mount(<Dropdown value={1} onChange={() => null}>
+      const wrapper = mount(<Dropdown value={1} onChange={() => null} open={true}>
         <DropdownItem value={1}>Test title 1</DropdownItem>
         <DropdownItem value={2}>Test title 2</DropdownItem>
         <DropdownItem value={3}>Test title 3</DropdownItem>
@@ -106,7 +106,7 @@ describe('Test Dropdown component', () => {
     });
 
     test('Nodes should be disabled the correct way', () => {
-      const wrapper = mount(<Dropdown value={1} onChange={() => null}>
+      const wrapper = mount(<Dropdown value={1} onChange={() => null} open={true}>
         <DropdownItem value={1}>Test title 1</DropdownItem>
         <DropdownItem value={2} disabled>Test title 2</DropdownItem>
         <DropdownItem value={3} disabled={true}>Test title 3</DropdownItem>

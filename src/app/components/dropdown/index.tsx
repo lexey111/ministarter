@@ -33,7 +33,7 @@ export const Dropdown: React.FC<TDropdownProps> = (props: TDropdownProps) => {
 
   const children = Array.isArray(props.children) ? props.children : [props.children];
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(props.open ?? false);
 
   const [activeValue, setActiveValue] = useState(value);
   const [currentCaption, setCurrentCaption] = useState(getCaptionByValue(children, value));

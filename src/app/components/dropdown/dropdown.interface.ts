@@ -18,4 +18,5 @@ export type TDropdownProps = {
   onChange: (value: any) => void
   children: Array<TItemProps> | TItemProps
   tafPath?: string
+  open?: boolean
 };

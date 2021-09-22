@@ -1,6 +1,6 @@
 const timeout = 5000;
 
-describe('/ [Checkbox]', () => {
+describe('[Checkbox]', () => {
     let page;
 
     beforeAll(async () => {
